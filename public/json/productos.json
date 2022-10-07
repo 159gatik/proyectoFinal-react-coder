@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "idCategoria": "bicicletas",
+        "oferta": true,
+        "nombre": "Venzo",
+        "marca": "Primal",
+        "precio": 95000,
+        "stock": 10,
+        "img": "venzo-primal.jpg"
+    },
+    {
+        "id": 2,
+        "idCategoria": "bicicletas",
+        "oferta": true,
+        "nombre": "Zenith",
+        "marca": "Calea",
+        "precio": 450000,
+        "stock": 5,
+        "img": "zenith-calea.jpg"
+    },
+    {
+        "id": 3,
+        "idCategoria": "bicicletas",
+        "oferta": true,
+        "nombre": "Firebird",
+        "marca": "Adventure",
+        "precio": 67000,
+        "stock": 20,
+        "img": "firebird.jpg"
+    },
+    {
+        "id": 4,
+        "idCategoria": "bicicletas",
+        "nombre": "Vairo",
+        "marca": "XR 3.5",
+        "precio": 150000,
+        "stock": 5,
+        "img": "vairo-xr.jpg"
+    },
+    {
+        "id": 5,
+        "idCategoria": "bicicletas",
+        "nombre": "Zenith",
+        "marca": "Andes",
+        "precio": 180000,
+        "stock": 15,
+        "img": "zenith-andes.jpg"
+    },
+    {
+        "id": 6,
+        "idCategoria": "indumentaria",
+        "nombre": "Casco",
+        "marca": "Lazer - color negro",
+        "precio": 27000,
+        "stock": 11,
+        "img": "casco-lazer-negro.jpg"
+    },
+    {
+        "id": 7,
+        "idCategoria": "indumentaria",
+        "nombre": "Casco",
+        "marca": "Lazer - color azul",
+        "precio": 18900,
+        "stock": 18,
+        "img": "casco-lazer-azul.jpg"
+    },
+    {
+        "id": 8,
+        "idCategoria": "indumentaria",
+        "nombre": "Casco",
+        "marca": "Lazer - color blanco",
+        "precio": 17500,
+        "stock": 7,
+        "img": "casco-lazer-blanco.jpg"
+    },
+    {
+        "id": 9,
+        "idCategoria": "indumentaria",
+        "marca": "oakley",
+        "precio": 33000,
+        "stock": 21,
+        "img": "gafas-oakley.jpg"
+    },
+    {
+        "id": 10,
+        "idCategoria": "indumentaria",
+        "nombre": "Guantes",
+        "marca": "Seven",
+        "precio": 6900,
+        "stock": 5,
+        "img": "guantes-seven.jpg"
+    },
+    {
+        "id": 11,
+        "idCategoria": "indumentaria",
+        "nombre": "Zapatillas",
+        "marca": "Metha",
+        "precio": 20700,
+        "stock": 8,
+        "img": "zapatillas-metha.jpg"
+    },
+    {
+        "id": 12,
+        "idCategoria": "indumentaria",
+        "nombre": "Remera",
+        "marca": "Ziroox",
+        "precio": 8490,
+        "stock": 6,
+        "img": "remera-ziroox.jpg"
+    },
+    {
+        "id": 13,
+        "idCategoria": "accesorios",
+        "nombre": "Pedales",
+        "marca": "Shimano",
+        "precio": 18490,
+        "stock": 15,
+        "img": "pedales-shimano.jpg"
+    }
+]

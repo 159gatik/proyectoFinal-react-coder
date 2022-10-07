@@ -1,0 +1,43 @@
+.styleCard {
+    width: 20rem;
+    margin: 12px;
+    border-radius: 15px;
+}
+
+.styleCard:hover {
+    box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
+    transition: all 0.7s linear;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.card-img-top {
+    transform: scale(1);
+    transition: all 0.5s;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
+}
+
+.card-text {
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.cardProducto {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+span {
+    font-weight: bold;
+}
+
+/* .cardImage {
+    width: 25rem;
+} */
