@@ -9,6 +9,7 @@ import About from './containers/About.jsx';
 import Contacto from './containers/Contacto.jsx';
 import Carrito from './containers/Carrito.jsx';
 import Categoria from './containers/Categoria.jsx';
+import Footer from './containers/Footer.jsx';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <Route path="/carrito" element={<Carrito />} />
         </Routes>
       </BrowserRouter>
-
+      <Footer />
     </>
   );
 }

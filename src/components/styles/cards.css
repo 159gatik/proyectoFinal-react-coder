@@ -16,6 +16,7 @@
 .card-img-top {
     transform: scale(1);
     transition: all 0.5s;
+
 }
 
 .card-img-top:hover {
@@ -25,6 +26,7 @@
 .card-text {
     font-weight: bolder;
     font-size: 15px;
+
 }
 
 .cardProducto {
@@ -38,6 +40,11 @@ span {
     font-weight: bold;
 }
 
-/* .cardImage {
-    width: 25rem;
-} */
+.cardImage {
+    transform: scale(1);
+    transition: all 0.5s;
+}
+
+.cardImage:hover {
+    transform: scale(1.2);
+}

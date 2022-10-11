@@ -9,9 +9,7 @@ const ItemListContainer = ({ greeting }) => {
     const [productos, setProductos] = useState([]);
     useEffect(() => {
         consultarProductos().then(productos => {
-
             const cardProductos = productos.map(producto =>
-
                 <div className="card text-center styleCard" key={producto.id}>
                     <div className='overflow'>
                         <img src={"../img/" + producto.img} className="card-img-top" alt={producto.nombre} />
@@ -21,9 +19,7 @@ const ItemListContainer = ({ greeting }) => {
                         <p className="card-text text-secondary"> <span>Modelo:</span> {producto.marca} </p>
                         <p className="card-text text-secondary"><span>Precio:</span> ${producto.precio} </p>
                         <p className="card-text text-secondary"><span>Disponibles:</span> {producto.stock} </p>
-
                         <button className='btnProducto'><Link className='nav-link' to={"/producto/" + producto.id}> Ver {producto.nombre} </Link></button>
-
                     </div>
                 </div>)
             setProductos(cardProductos)

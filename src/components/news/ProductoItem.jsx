@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { consultarProductos } from '../../utils/funcionesUtiles';
-import ItemList from './ItemList';
-const Item = () => {
-    const [producto, setProducto] = useState([]);
+import ProductoOferta from './ProductoOferta'
+
+const ProductoItem = () => {
+    const [offers, setOffers] = useState([]);
     const { id } = useParams()
     useEffect(() => {
         consultarProductos().then(productos => {
             const producto1 = productos.find(productoArray => productoArray.id == id)
-            setProducto(producto1)
+            setOffers(producto1)
         })
     }, []);
+
+
     return (
         <>
             <div className="card mb-4 cardProducto ">
-                <ItemList producto={producto}></ItemList>
+                <ProductoOferta productOferta={offers}></ProductoOferta>
             </div>
         </>
     );
 }
 
-export default Item;
+export default ProductoItem;

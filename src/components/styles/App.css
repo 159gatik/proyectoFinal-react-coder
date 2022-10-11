@@ -57,3 +57,19 @@ body {
   color: #fff;
   text-align: center;
 }
+
+.footer {
+  height: 200px;
+  background-color: black;
+  color: #fff;
+}
+
+.footer h4 {
+  color: #fff;
+  font-family: 'Peralta', cursive;
+}
+
+.footer ul {
+  list-style: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}

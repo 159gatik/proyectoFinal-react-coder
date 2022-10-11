@@ -18,9 +18,7 @@ const Categoria = () => {
                         <p className="card-text text-secondary"> <span>Modelo:</span> {producto.marca} </p>
                         <p className="card-text text-secondary"><span>Precio:</span> ${producto.precio} </p>
                         <p className="card-text text-secondary"><span>Disponibles:</span> {producto.stock} </p>
-
                         <button className='btnProducto'><Link className='nav-link' to={"/producto/" + producto.id}> Ver {producto.nombre} </Link></button>
-
                     </div>
                 </div>)
             setProducts(cardProductos)

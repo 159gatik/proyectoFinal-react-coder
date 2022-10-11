@@ -12,7 +12,6 @@ const Secciones = () => {
             </li>
             <Dropdown lista={ListCategory}></Dropdown>
             <li className="nav-item">
-                <Link className='nav-link active' to="/producto">novedades</Link>
             </li>
             <li className="nav-item">
                 <Link className='nav-link active' to="/about">ayuda</Link>

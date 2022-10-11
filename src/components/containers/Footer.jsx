@@ -1,48 +1,22 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 const Footer = () => {
-
-
     return (
         <>
-            <div className='footer '>
-                <div className='container'>
-
-                    <div className='d-flex row'>
-
-                        <div className='d-flex justify-content-evenly mt-5'>
-
-                            <div className='listStyle'>
-                                <ul>
-                                    <li><p>A</p></li>
-                                    <li><p>b</p></li>
-                                    <li><p>c</p></li>
-                                    <li><p>d</p></li>
-                                </ul>
-                            </div>
-                            <div className='listStyle'>
-                                <ul>
-                                    <li><p>PRODUCTS</p></li>
-                                    <li><p>bicicletas</p></li>
-                                    <li><p>accesorios</p></li>
-                                    <li><p>indumentaria</p></li>
-                                </ul>
-                            </div>
-                            <div className='listStyle'>
-                                <ul>
-                                    <li><p></p></li>
-                                    <li><p></p></li>
-                                    <li><p></p></li>
-                                    <li><p></p></li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-
-
-                    </div>
-
+            <div className='footer'>
+                <div className='d-flex justify-content-center mt-5'>
+                    <ul className='row mt-5 text-center'>
+                        <h4>Contactános</h4>
+                        <li><i class="fa-brands fa-whatsapp"></i> 2454521</li>
+                        <li><FontAwesomeIcon icon={faEnvelope} /> pintobike@gmail.com</li>
+                        <li><FontAwesomeIcon icon={faLocationDot} /> Calle 4 5454</li>
+                    </ul>
+                    <ul className='mt-5 text-center'>
+                        <h4>Sigamos conectados</h4>
+                        <li><i class="fa-brands fa-instagram"> pinto.bike</i></li>
+                        <li><i class="fa-brands fa-facebook-f"> pinto bike</i></li>
+                    </ul>
                 </div>
             </div>
         </>
