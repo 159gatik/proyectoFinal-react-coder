@@ -9,4 +9,4 @@ Es un Ecommerce sobre productos de ciclismo
 - [React-Bootstrap](https://react-bootstrap.github.io/)
 - [React-router-dom](https://v5.reactrouter.com/)
 - [Bootstrap](https://getbootstrap.com/)
-
+- [FontAwesome](https://fontawesome.com)
