@@ -14,8 +14,8 @@ const Footer = () => {
                     </ul>
                     <ul className='mt-5 text-center'>
                         <h4>Sigamos conectados</h4>
-                        <li><i class="fa-brands fa-instagram"> pinto.bike</i></li>
-                        <li><i class="fa-brands fa-facebook-f"> pinto bike</i></li>
+                        <li><i class="fa-brands fa-instagram">pinto.bike</i></li>
+                        <li><i class="fa-brands fa-facebook-f">pinto bike</i></li>
                     </ul>
                 </div>
             </div>
