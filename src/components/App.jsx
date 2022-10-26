@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import React from 'react';
-// import Carrito from './containers/Carrito.jsx';
-import ItemListContainer from './containers/ItemListContainer.jsx';
+import { DarkModeProvider } from './context/darkMode.jsx';
+import ItemListContainer from './containers/ItemListContainer/ItemListContainer.jsx';
 import Navbar from './containers/Navbar.jsx';
 import './styles/App.css'
-import Item from './containers/Item.jsx';
+import Item from './containers/ItemListContainer/Item.jsx';
 import About from './containers/About.jsx';
-import Contacto from './containers/Contacto.jsx';
+import Form from './containers/Form.jsx';
 import Carrito from './containers/Carrito.jsx';
 import Categoria from './containers/Categoria.jsx';
 import Footer from './containers/Footer.jsx';
@@ -14,18 +14,21 @@ import Footer from './containers/Footer.jsx';
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/producto/:id" element={<Item />} />
-          <Route path="/categoria/:id" element={<Categoria />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/carrito" element={<Carrito />} />
-        </Routes>
-      </BrowserRouter>
-      <Footer />
+      <DarkModeProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/producto/:id" element={<Item />} />
+            <Route path="/categoria/:id" element={<Categoria />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/form" element={<Form />} />
+            <Route path="/carrito" element={<Carrito />} />
+            <Route path="*" element={<h1>Error 404</h1>} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </DarkModeProvider>
     </>
   );
 }

@@ -4,6 +4,12 @@
     border-radius: 15px;
 }
 
+.styleCardCarrito {
+    width: 9rem;
+    border-radius: 15px;
+}
+
+
 .styleCard:hover {
     box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
     transition: all 0.7s linear;
@@ -11,6 +17,23 @@
 
 .overflow {
     overflow: hidden;
+}
+
+.detailCard {
+    width: 60%;
+}
+
+.detailBottom {
+    display: flex;
+    gap: 10px;
+}
+
+
+.detailBottom .number {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    overflow: visible;
 }
 
 .card-img-top {
@@ -47,4 +70,8 @@ span {
 
 .cardImage:hover {
     transform: scale(1.2);
+}
+
+.backCart {
+    text-align: center;
 }

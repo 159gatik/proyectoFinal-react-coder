@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { memo } from 'react';
 import Dropdown from './Dropdown.jsx';
 import { Link } from 'react-router-dom';
 const Secciones = () => {
@@ -17,10 +17,10 @@ const Secciones = () => {
                 <Link className='nav-link active' to="/about">ayuda</Link>
             </li>
             <li className="nav-item">
-                <Link className='nav-link active' to="/contacto">contacto </Link>
+                <Link className='nav-link active' to="/form">contacto </Link>
             </li>
         </>
     );
 }
 
-export default Secciones;
+export default memo(Secciones);

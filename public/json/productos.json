@@ -8,7 +8,7 @@
         "precio": 95000,
         "precioOferta": 80000,
         "stock": 10,
-        "img": "venzo-primal.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fvenzo-primal.jpg?alt=media&token=4594d60a-2dba-40a4-9f2f-ea6c366d94c1"
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
         "precio": 259900,
         "precioOferta": 220500,
         "stock": 5,
-        "img": "zenith-calea.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fzenith-calea.jpg?alt=media&token=fbdd4faf-e143-4c21-b3f3-cdff97d543b4"
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@
         "precio": 67000,
         "precioOferta": 55000,
         "stock": 20,
-        "img": "firebird.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Ffirebird.jpg?alt=media&token=4b822e11-fbca-4cca-acf9-1acf7de7770a"
     },
     {
         "id": 4,
@@ -39,7 +39,7 @@
         "marca": "XR 3.5",
         "precio": 150000,
         "stock": 5,
-        "img": "vairo-xr.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fvairo-xr.jpg?alt=media&token=4fc00f36-9ef1-4d4d-a9f4-8a41d90eb85b"
     },
     {
         "id": 5,
@@ -48,7 +48,7 @@
         "marca": "Andes",
         "precio": 180000,
         "stock": 15,
-        "img": "zenith-andes.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fzenith-andes.jpg?alt=media&token=30520e70-69dc-4408-85dc-396a101b651e"
     },
     {
         "id": 6,
@@ -57,7 +57,7 @@
         "marca": "Lazer - color negro",
         "precio": 27000,
         "stock": 11,
-        "img": "casco-lazer-negro.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fcasco-lazer-negro.jpg?alt=media&token=dcd09d6f-85c0-4027-a38e-b6cf5ace5e60"
     },
     {
         "id": 7,
@@ -66,7 +66,7 @@
         "marca": "Lazer - color azul",
         "precio": 18900,
         "stock": 18,
-        "img": "casco-lazer-azul.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fcasco-lazer-azul.jpg?alt=media&token=a7d53b17-a3e5-4449-829b-00439286d7d8"
     },
     {
         "id": 8,
@@ -75,15 +75,16 @@
         "marca": "Lazer - color blanco",
         "precio": 17500,
         "stock": 7,
-        "img": "casco-lazer-blanco.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fcasco-lazer-blanco.jpg?alt=media&token=f9ec40c4-143c-4215-8849-ad109062c8f4"
     },
     {
         "id": 9,
         "idCategoria": "indumentaria",
+        "nombre": "Lentes",
         "marca": "oakley",
         "precio": 33000,
         "stock": 21,
-        "img": "gafas-oakley.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fgafas-oakley.jpg?alt=media&token=13c6bb9e-c328-46e8-8368-8779184bda71"
     },
     {
         "id": 10,
@@ -92,7 +93,7 @@
         "marca": "Seven",
         "precio": 6900,
         "stock": 5,
-        "img": "guantes-seven.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fguantes-seven.jpg?alt=media&token=8a2c724b-b954-4ebc-9288-6080ce6b8235"
     },
     {
         "id": 11,
@@ -101,7 +102,7 @@
         "marca": "Metha",
         "precio": 20700,
         "stock": 8,
-        "img": "zapatillas-metha.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fzapatillas-metha.jpg?alt=media&token=c4a0922e-fdf6-4fb1-b75b-780ee978c2f8"
     },
     {
         "id": 12,
@@ -110,7 +111,7 @@
         "marca": "Ziroox",
         "precio": 8490,
         "stock": 6,
-        "img": "remera-ziroox.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fremera-ziroox.jpg?alt=media&token=40da950d-4dca-486e-8a23-d271abfa16c1"
     },
     {
         "id": 13,
@@ -119,7 +120,7 @@
         "marca": "Shimano",
         "precio": 18490,
         "stock": 15,
-        "img": "pedales-shimano.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fpedales-shimano.jpg?alt=media&token=77e4b023-be3a-429e-93d9-94465856069f"
     },
     {
         "id": 14,
@@ -128,7 +129,7 @@
         "marca": "Giyo",
         "precio": 1290,
         "stock": 7,
-        "img": "inflador.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Finflador.jpg?alt=media&token=83db50b1-88ce-40e4-96aa-5882584d21bf"
     },
     {
         "id": 15,
@@ -137,7 +138,7 @@
         "marca": "Van Halen",
         "precio": 11690,
         "stock": 10,
-        "img": "linterna.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Flinterna.jpg?alt=media&token=3cb76e65-8bb4-4a1e-a793-25b739e112c9"
     },
     {
         "id": 16,
@@ -146,7 +147,7 @@
         "marca": "Shimano",
         "precio": 18490,
         "stock": 15,
-        "img": "pedales-shimano.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fpedales-shimano.jpg?alt=media&token=77e4b023-be3a-429e-93d9-94465856069f"
     },
     {
         "id": 17,
@@ -155,7 +156,7 @@
         "marca": "Mtb/Ruta x9",
         "precio": 1290,
         "stock": 20,
-        "img": "llaves-allen.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fllaves-allen.jpg?alt=media&token=f005a150-dcf1-4916-bc15-a2cd2258cf90"
     },
     {
         "id": 18,
@@ -164,7 +165,7 @@
         "marca": "Ziroox",
         "precio": 1290,
         "stock": 30,
-        "img": "caramañola.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fcaramañola.jpg?alt=media&token=2791a9f1-e1c0-4a40-a515-a5f45eb6924c"
     },
     {
         "id": 19,
@@ -173,7 +174,7 @@
         "marca": "Elite Custom Race",
         "precio": 4990,
         "stock": 20,
-        "img": "porta-caramañola.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fporta-caramañola.jpg?alt=media&token=46d9205a-d32f-4ba3-9c71-413fbeda448a"
     },
     {
         "id": 20,
@@ -182,6 +183,6 @@
         "marca": "Astra 29 Elite",
         "precio": 454900,
         "stock": 8,
-        "img": "zenith-astra.jpg"
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-rojas.appspot.com/o/Imagenes%2Fzenith-astra.jpg?alt=media&token=a438f1c9-8b60-4e05-9fee-304ba2595a65"
     }
 ]

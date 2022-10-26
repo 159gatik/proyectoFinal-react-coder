@@ -1,17 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { consultarProductos } from '../../utils/funcionesUtiles';
+import { darkModeContext } from '../context/darkMode';
 const Categoria = () => {
 
     const [products, setProducts] = useState([]);
+
+    const { darkMode } = useContext(darkModeContext);
     const { id } = useParams()
     useEffect(() => {
         consultarProductos('../json/productos.json').then(productos => {
             const categoryProducts = productos.filter(productoCategorias => productoCategorias.idCategoria == id)
+
             const cardProductos = categoryProducts.map(producto =>
                 <div className="card text-center styleCard cardProducto" key={producto.id}>
                     <div className='overflow'>
-                        <img src={"../img/" + producto.img} className="card-img-top" alt={producto.nombre} />
+                        <img src={producto.img} className="card-img-top" alt={producto.nombre} />
                     </div>
                     <div className="card-body text-dark">
                         <h4 className="card-title">{producto.nombre}</h4>
@@ -26,9 +30,13 @@ const Categoria = () => {
     }, [id]);
 
     return (
-        <div className='row'>
-            {products}
-        </div>
+        <>
+            <div className={darkMode ? 'darkMode row' : 'row'}>
+                <div className='row mw-100 d-flex justify-content-center'>
+                    {products}
+                </div>
+            </div>
+        </>
     );
 }
 

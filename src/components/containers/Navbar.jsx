@@ -1,14 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Buttom from '../navbar/content/Buttom';
-import Form from '../navbar/layouts/Form';
+import Search from '../navbar/layouts/Search';
 import Secciones from '../navbar/layouts/Secciones'
 import Cartwidget from '../navbar/content/Cartwidget.jsx';
+import { darkModeContext } from '../context/darkMode';
+import { Switch, FormGroup, FormControlLabel } from '@mui/material'
 import "../styles/App.css"
 
 
 const Navbar = () => {
+
+
+
+    const { darkMode, toggleDarkMode } = useContext(darkModeContext);
 
     return (
         <>
@@ -22,7 +28,12 @@ const Navbar = () => {
                         <ul className="navbar-nav me-auto">
                             <Secciones />
                         </ul>
-                        <Form busqueda="Ingrese producto" />
+
+                        <FormGroup>
+                            <FormControlLabel control={<Switch defaultChecked color="warning" />} onClick={() => toggleDarkMode()} />
+                        </FormGroup>
+
+                        <Search busqueda="Ingrese producto" />
                     </div>
                     <ul className="navbar-nav me-auto ">
                         <li className="nav-item">

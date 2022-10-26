@@ -6,6 +6,11 @@ body {
   box-sizing: border-box;
 }
 
+.darkMode {
+  background-color: #1a1a1a;
+  color: antiquewhite;
+  transition: all 2s ease-out;
+}
 
 
 .btnProducto {
@@ -47,10 +52,6 @@ body {
   font-weight: 200;
 }
 
-.footer {
-  height: 250px;
-  background-color: black;
-}
 
 .listStyle ul {
   list-style-type: none;
@@ -60,7 +61,7 @@ body {
 
 .footer {
   height: 200px;
-  background-color: black;
+  background-color: #1a1a1a;
   color: #fff;
 }
 
