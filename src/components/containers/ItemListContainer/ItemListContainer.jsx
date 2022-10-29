@@ -23,7 +23,7 @@ const ItemListContainer = () => {
                         <p className="card-text text-secondary"> <span>Modelo:</span> {producto[1].marca} </p>
                         <p className="card-text text-secondary"><span>Precio:</span> ${producto[1].precio} </p>
                         <p className="card-text text-secondary"><span>Disponibles:</span> {producto[1].stock} </p>
-                        <button className='btnProducto'><Link className='nav-link' to={"/producto/" + producto[0]}> Ver {producto.nombre} </Link></button>
+                        <button className='btnProducto'><Link className='nav-link' to={"/producto/" + producto[0]}> Ver {producto[1].nombre} </Link></button>
                     </div>
                 </div>)
             setProductos(cardProductos)
