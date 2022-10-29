@@ -35,7 +35,7 @@ const cargarBaseDeDatos = async () => {
 
 const getProducto = async (id) => {
     const producto = await getDoc(doc(db, "productos", id))
-    return producto
+    return { ...producto.data(), id: producto.id }
 }
 
 

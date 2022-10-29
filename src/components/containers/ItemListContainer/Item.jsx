@@ -10,16 +10,18 @@ const Item = () => {
     const [producto, setProducto] = useState([]);
     const { id } = useParams()
     const { darkMode } = useContext(darkModeContext)
+
+
     useEffect(() => {
-        getProducto(id).then(prod => {
-            setProducto([prod.id, prod.data()])
+        getProducto(id).then(producto => {
+            setProducto(producto)
         })
     }, [id]);
 
     if (producto.length != 0) {
         return (
             <div className="card mb-4 cardProducto ">
-                <ItemList producto={producto}></ItemList>
+                <ItemList producto={producto} />
             </div>
         )
 

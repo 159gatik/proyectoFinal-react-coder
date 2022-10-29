@@ -7,21 +7,14 @@ const CarritoProvider = (props) => {
 
     const [carrito, setCarrito] = useState([]);
 
-    const agregarProducto = (prod, cant) => {
-        const aux = carrito
-        let indice = aux.findIndex(producto => producto.id == prod.id)
-        if (indice != -1) {
-            aux[indice].cantidad = cant
-        }
-        else {
-            const id = prod[0]
-            const x = prod[1]
-            const prodCarrito = { id, ...x, cantidad: cant }
-            Swal.fire(`Agregado al carrito con exito`)
-            aux.push(prodCarrito)
-        }
-        setCarrito(structuredClone(aux))
-        console.log(carrito)
+    const agregarProducto = (producto, cantidad) => {
+        setCarrito([...carrito, { producto, cantidad }])
+        Swal.fire({
+            icon: 'success',
+            title: 'Agregado al carrito con exito',
+            showConfirmButton: true,
+            timer: 1500
+        })
     }
 
     const quitarProducto = (prod) => {
@@ -32,7 +25,14 @@ const CarritoProvider = (props) => {
         console.log(carrito)
     }
     const vaciarCarrito = () => {
-        return setCarrito([])
+        setCarrito([])
+        Swal.fire({
+            icon: 'warning',
+            title: 'Se vacio el carrito con exito',
+            showConfirmButton: false,
+            timer: 1500
+        })
+
     }
 
     return (

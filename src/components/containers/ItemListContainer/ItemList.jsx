@@ -15,7 +15,7 @@ const ItemList = ({ producto }) => {
 
     const cantidadProducto = (operacion) => {
         if (operacion == "+") {
-            if (cantidad < producto[1].stock) {
+            if (cantidad < producto.stock) {
                 setCantidad(cantidad + 1)
             }
         }
@@ -31,21 +31,31 @@ const ItemList = ({ producto }) => {
 
             <div className="row mt-5">
                 <div className="col-md-4 ">
-                    <img src={producto[1].img} className="img-fluid rounded-start cardImage" alt={producto[1].nombre} />
+                    <img src={producto.img} className="img-fluid rounded-start cardImage" alt={producto.nombre} />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body card detailCard">
-                        <h5 className="card-title fw-bold text-center">{producto[1].nombre}</h5>
-                        <p className="card-text text-secondary text-center"> <span>Modelo:</span> {producto[1].marca} </p>
-                        <p className="card-text text-secondary text-center"><span>Precio:</span> ${producto[1].precio} </p>
-                        <p className="card-text text-secondary text-center"><span>Disponibles:</span> {producto[1].stock} </p>
+                        <h5 className="card-title fw-bold text-center">{producto.nombre}</h5>
+                        <p className="card-text text-secondary text-center"> <span>Modelo:</span> {producto.marca} </p>
+                        <p className="card-text text-secondary text-center"><span>Precio:</span> ${producto.precio} </p>
+                        <p className="card-text text-secondary text-center"><span>Disponibles:</span> {producto.stock} </p>
                         <p className="card-text text-center text-danger"><span>10% de descuento pagando con Efectivo o Depósito/Transferencia Bancaria
                             15% de recargo en 12 cuotas (Solicitar link de pago por Whatsapp)</span></p>
                         <div className='container detailBottom'>
                             <Button variant='outlined' color='error' onClick={() => cantidadProducto("-")}><ArrowBackIcon baseClassName="fas" className="fa-plus-circle" /></Button>
                             <p className="card-text text-secondary number"> {cantidad} </p>
                             <Button variant='outlined' className='detailWidth' color='error' onClick={() => cantidadProducto("+")}><ArrowForwardIcon baseClassName="fas" className="fa-plus-circle" /></Button>
-                            <Button variant='outlined' startIcon={<ShoppingCartCheckoutIcon />} onClick={() => agregarProducto(producto, cantidad)}> agregar </Button>
+
+
+
+                            <Button variant='outlined' startIcon={<ShoppingCartCheckoutIcon />} onClick={() => {
+
+                                console.log("onClick del carrito")
+                                console.log(producto)
+                                agregarProducto(producto, cantidad)
+
+
+                            }}> agregar </Button>
                         </div>
 
                     </div>

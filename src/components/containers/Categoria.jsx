@@ -13,9 +13,7 @@ const Categoria = () => {
 
     useEffect(() => {
         getProductos().then(productos => {
-            console.log(productos)
             const productosFiltrados = productos.filter(producto => producto.categoria === id)
-            console.log(productosFiltrados)
             setProductosPorCategoria(productosFiltrados)
         })
     }, [id]);
@@ -25,10 +23,7 @@ const Categoria = () => {
         <div className={darkMode ? 'darkMode row' : 'row'}>
             <div className='row mw-100 d-flex justify-content-center'>
 
-
                 {productosPorCategoria.map(producto => <CardProducto producto={producto} />)}
-
-
 
             </div>
         </div>
