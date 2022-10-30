@@ -4,12 +4,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CarritoContext } from '../context/CarritoContext';
 import { darkModeContext } from '../context/darkMode';
+import CheckIcon from '@mui/icons-material/Check';
 import "../styles/cards.css"
-import Swal from 'sweetalert2';
 
 const Carrito = () => {
 
-    const { carrito, agregarProducto, quitarProducto, vaciarCarrito } = useContext(CarritoContext)
+    const { carrito, agregarProducto, quitarProducto, vaciarCarrito, compraRealizada } = useContext(CarritoContext)
     const { darkMode } = useContext(darkModeContext);
 
     return (
@@ -45,8 +45,9 @@ const Carrito = () => {
                         </>
                     )}
 
-                    <Button variant="contained" onClick={() => vaciarCarrito()} swal startIcon={<DeleteIcon />}> Borrar Todo</Button>
-                    <Button variant="contained" onClick={() => vaciarCarrito()} startIcon={<DeleteIcon />} ></Button>
+                    <Button variant="contained" className="buttomCarrito" onClick={() => vaciarCarrito()} startIcon={<DeleteIcon />}> Borrar Todo</Button>
+                    <Button to="/" variant="contained" className='buttomCompra' color="success" onClick={() => compraRealizada()} startIcon={<CheckIcon />} ><Link to="/" className='buttomCompra'>Enviar Pedido</Link></Button>
+
                 </div>
                 : <div className='backCart'>  <h1>No hay productos en tu carrito😔</h1> <button className='btn btn-primary'><Link className='nav-link' to={"/"}> Volver a inicio </Link></button> </div>
             }

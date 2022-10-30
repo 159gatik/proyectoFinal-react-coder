@@ -10,7 +10,6 @@ import Form from './containers/Form.jsx';
 import Carrito from './containers/Carrito.jsx';
 import Categoria from './containers/Categoria.jsx';
 import Footer from './containers/Footer.jsx';
-
 function App() {
   return (
     <>

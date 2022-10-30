@@ -32,13 +32,23 @@ const CarritoProvider = (props) => {
             showConfirmButton: false,
             timer: 1500
         })
+    }
 
+    const compraRealizada = () => {
+        setCarrito([])
+        Swal.fire({
+            icon: 'success',
+            title: 'COMPRA REALIZADA',
+            text: 'QUE LA DISFRUTES!',
+            showConfirmButton: false,
+            timer: 2500
+        })
     }
 
     return (
         <>
 
-            <CarritoContext.Provider value={{ carrito, agregarProducto, quitarProducto, vaciarCarrito }}>
+            <CarritoContext.Provider value={{ carrito, agregarProducto, quitarProducto, vaciarCarrito, compraRealizada }}>
                 {props.children}
             </CarritoContext.Provider>
         </>

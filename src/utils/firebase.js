@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { collection, doc, addDoc, getFirestore, getDocs, getDoc } from "firebase/firestore";
+import { collection, doc, addDoc, getFirestore, getDocs, getDoc, updateDoc, deleteDoc } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -35,7 +35,8 @@ const cargarBaseDeDatos = async () => {
 
 const getProducto = async (id) => {
     const producto = await getDoc(doc(db, "productos", id))
-    return { ...producto.data(), id: producto.id }
+    const prod = { ...producto.data(), id: producto.id }
+    return prod
 }
 
 
@@ -47,6 +48,43 @@ const getProductos = async () => {
     return items
 }
 
+const updateProducto = async (id, info) => {
+    const estado = await updateDoc(doc(db, "productos", id), info)
+    return estado
+}
+
+const deleteProducto = async (id) => {
+    const stateDelete = await deleteDoc(doc(db, "productos", id))
+    return stateDelete
+}
+const createProducto = async (objetProduct) => {
+    const create = await addDoc(collection(db, "productos"), {
+        nombre: objetProduct.nombre,
+        marca: objetProduct.marca,
+        categoria: objetProduct.idCategoria,
+        stock: objetProduct.stock,
+        precio: objetProduct.precio,
+        img: objetProduct.img
+    })
+    return create
+}
 
 
-export { cargarBaseDeDatos, getProductos, getProducto }
+const createOrdenDeCompra = async (precioTotal, nombre, apellido, email, dni, direccion) => {
+    const createOrden = await addDoc(collection(db, "ordenDeCompra"), {
+        nombre: nombre,
+        apellido: apellido,
+        email: email,
+        dni: dni,
+        direccion: direccion,
+        precio: precioTotal
+    })
+    return createOrden
+}
+
+const getOrdenDeCompra = async (id) => {
+    const ordenDeCompra = await getDoc(doc(db, "ordenDeCompra", id))
+    return ordenDeCompra
+}
+
+export { cargarBaseDeDatos, getProductos, getProducto, updateProducto, deleteProducto, createProducto, createOrdenDeCompra, getOrdenDeCompra }

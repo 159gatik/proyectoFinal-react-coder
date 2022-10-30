@@ -42,20 +42,13 @@ const ItemList = ({ producto }) => {
                         <p className="card-text text-center text-danger"><span>10% de descuento pagando con Efectivo o Depósito/Transferencia Bancaria
                             15% de recargo en 12 cuotas (Solicitar link de pago por Whatsapp)</span></p>
                         <div className='container detailBottom'>
-                            <Button variant='outlined' color='error' onClick={() => cantidadProducto("-")}><ArrowBackIcon baseClassName="fas" className="fa-plus-circle" /></Button>
+                            <Button variant='outlined' color='error' onClick={() => cantidadProducto("-")}><ArrowBackIcon className="fa-plus-circle" /></Button>
                             <p className="card-text text-secondary number"> {cantidad} </p>
-                            <Button variant='outlined' className='detailWidth' color='error' onClick={() => cantidadProducto("+")}><ArrowForwardIcon baseClassName="fas" className="fa-plus-circle" /></Button>
+                            <Button variant='outlined' className='detailWidth' color='error' onClick={() => cantidadProducto("+")}><ArrowForwardIcon className="fa-plus-circle" /></Button>
 
 
 
-                            <Button variant='outlined' startIcon={<ShoppingCartCheckoutIcon />} onClick={() => {
-
-                                console.log("onClick del carrito")
-                                console.log(producto)
-                                agregarProducto(producto, cantidad)
-
-
-                            }}> agregar </Button>
+                            <Button variant='outlined' startIcon={<ShoppingCartCheckoutIcon />} onClick={() => { agregarProducto(producto, cantidad) }}> agregar </Button>
                         </div>
 
                     </div>

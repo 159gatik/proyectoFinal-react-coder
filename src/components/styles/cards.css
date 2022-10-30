@@ -75,3 +75,17 @@ span {
 .backCart {
     text-align: center;
 }
+
+
+.buttomCarrito {
+    position: absolute;
+    left: 85%;
+    padding-bottom: 20px;
+    width: 200px;
+}
+
+.buttomCompra {
+    position: inherit;
+    text-decoration: none;
+    width: 200px;
+}
