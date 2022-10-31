@@ -44,10 +44,8 @@ const Carrito = () => {
                             </table>
                         </>
                     )}
-
                     <Button variant="contained" className="buttomCarrito" onClick={() => vaciarCarrito()} startIcon={<DeleteIcon />}> Borrar Todo</Button>
-                    <Button to="/" variant="contained" className='buttomCompra' color="success" onClick={() => compraRealizada()} startIcon={<CheckIcon />} ><Link to="/" className='buttomCompra'>Enviar Pedido</Link></Button>
-
+                    <Button to="/checkout" variant="contained" className='buttomCompra' color="success" startIcon={<CheckIcon />} ><Link to="/checkout" className='buttomCompra'>Enviar Pedido</Link></Button>
                 </div>
                 : <div className='backCart'>  <h1>No hay productos en tu carrito😔</h1> <button className='btn btn-primary'><Link className='nav-link' to={"/"}> Volver a inicio </Link></button> </div>
             }

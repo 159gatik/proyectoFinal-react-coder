@@ -6,7 +6,12 @@ Es un Ecommerce dedicado a la venta de bicicletas, accesorios e indumentaria dep
 
 ## Dependencias instaladas
 
-- [React-Bootstrap](https://react-bootstrap.github.io/)
-- [React-router-dom](https://v5.reactrouter.com/)
-- [Bootstrap](https://getbootstrap.com/)
-- [FontAwesome](https://fontawesome.com)
+- [React-Bootstrap] (https://react-bootstrap.github.io/)
+- [React-router-dom] (https://v5.reactrouter.com/)
+- [Bootstrap] (https://getbootstrap.com/)
+- [Mui] (https://mui.com)
+- [FontAwesome] (https://fontawesome.com)
+- [SweetAlert2] (https://sweetalert2.github.io)
+
+
+

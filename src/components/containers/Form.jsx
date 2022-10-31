@@ -8,9 +8,6 @@ const Contacto = () => {
         e.preventDefault()
         const datosFormulario = new FormData(formularioReferenciado.current)
         console.log(Object.fromEntries(datosFormulario));
-
-
-
     }
 
     return (

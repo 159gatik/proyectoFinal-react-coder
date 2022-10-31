@@ -10,6 +10,7 @@ import Form from './containers/Form.jsx';
 import Carrito from './containers/Carrito.jsx';
 import Categoria from './containers/Categoria.jsx';
 import Footer from './containers/Footer.jsx';
+import Checkout from './containers/Checkout.jsx';
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
             <Route path="/form" element={<Form />} />
             <Route path="/carrito" element={<Carrito />} />
             <Route path="*" element={<h1>Error 404</h1>} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
           <Footer />
         </BrowserRouter>

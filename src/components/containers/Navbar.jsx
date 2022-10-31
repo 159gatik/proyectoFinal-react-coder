@@ -11,11 +11,7 @@ import "../styles/App.css"
 
 
 const Navbar = () => {
-
-
-
     const { darkMode, toggleDarkMode } = useContext(darkModeContext);
-
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -28,11 +24,9 @@ const Navbar = () => {
                         <ul className="navbar-nav me-auto">
                             <Secciones />
                         </ul>
-
                         <FormGroup>
                             <FormControlLabel control={<Switch defaultChecked color="warning" />} onClick={() => toggleDarkMode()} />
                         </FormGroup>
-
                         <Search busqueda="Ingrese producto" />
                     </div>
                     <ul className="navbar-nav me-auto ">
