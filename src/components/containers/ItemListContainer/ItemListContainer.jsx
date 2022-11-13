@@ -19,8 +19,10 @@ const ItemListContainer = () => {
 
     return (
         <>
-            <div className={darkMode ? 'darkMode row justify-content-center' : 'row justify-content-center'}>
-                {productos.map(producto => <CardProducto producto={producto} />)}
+            <div className={`container-fluid ${darkMode ? 'darkMode  ' : ''}`}>
+                <div className='row' >
+                    {productos.map(producto => <CardProducto producto={producto} />)}
+                </div>
             </div>
         </>
     );

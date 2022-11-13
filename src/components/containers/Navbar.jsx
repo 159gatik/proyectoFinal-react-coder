@@ -8,7 +8,8 @@ import Cartwidget from '../navbar/content/Cartwidget.jsx';
 import { darkModeContext } from '../context/darkMode';
 import { Switch, FormGroup, FormControlLabel } from '@mui/material'
 import "../styles/App.css"
-
+// import Login from '../navbar/layouts/Login';
+// import Register from '../navbar/layouts/Register'
 
 const Navbar = () => {
     const { darkMode, toggleDarkMode } = useContext(darkModeContext);

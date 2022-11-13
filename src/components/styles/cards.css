@@ -2,6 +2,7 @@
     width: 20rem;
     margin: 12px;
     border-radius: 15px;
+    position: relative;
 }
 
 .styleCardCarrito {
@@ -88,4 +89,32 @@ span {
     position: inherit;
     text-decoration: none;
     width: 200px;
+}
+
+
+
+
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    font-size: 17px !important;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+    font-size: 20px;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
 }

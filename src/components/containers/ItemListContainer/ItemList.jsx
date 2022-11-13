@@ -10,7 +10,7 @@ const ItemList = ({ producto }) => {
 
     const [cantidad, setCantidad] = useState(1);
 
-    const { carrito, agregarProducto, quitarProducto } = useContext(CarritoContext)
+    const { carrito, agregarProducto, quitarProducto, formatearMonto } = useContext(CarritoContext)
     const { darkMode } = useContext(darkModeContext);
 
     const cantidadProducto = (operacion) => {
@@ -37,7 +37,7 @@ const ItemList = ({ producto }) => {
                     <div className="card-body card detailCard">
                         <h5 className="card-title fw-bold text-center">{producto.nombre}</h5>
                         <p className="card-text text-secondary text-center"> <span>Modelo:</span> {producto.marca} </p>
-                        <p className="card-text text-secondary text-center"><span>Precio:</span> ${producto.precio} </p>
+                        <p className="card-text text-secondary text-center"><span>Precio:</span> {formatearMonto(producto.precio)} </p>
                         <p className="card-text text-secondary text-center"><span>Disponibles:</span> {producto.stock} </p>
                         <p className="card-text text-center text-danger"><span>10% de descuento pagando con Efectivo o Depósito/Transferencia Bancaria
                             15% de recargo en 12 cuotas (Solicitar link de pago por Whatsapp)</span></p>
