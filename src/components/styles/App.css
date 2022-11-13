@@ -8,7 +8,7 @@ body {
 
 .darkMode {
   background-color: #1a1a1a;
-  color: antiquewhite;
+  color: white;
   transition: all 2s ease-out;
 }
 
@@ -59,14 +59,14 @@ body {
   text-align: center;
 }
 
-.footer {
-  /* height: 200px;
+/* .footer {
+  height: 200px;
   position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #1a1a1a;
   color: white;
-  text-align: center; */
+  text-align: center;
 
 
   position: relative;
@@ -75,9 +75,9 @@ body {
   right: 0;
   background-color: #1a1a1a;
   color: #fff;
-}
+} */
 
-.footer h4 {
+/* .footer h4 {
   color: #fff;
   font-family: 'Peralta', cursive;
 }
@@ -85,4 +85,43 @@ body {
 .footer ul {
   list-style: none;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+} */
+
+
+
+
+#page-container {
+  position: relative;
+  min-height: 86.4vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+  /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: #1a1a1a;
+  /* Footer height */
+}
+
+
+#footer h4 {
+  color: #fff;
+  font-family: 'Peralta', cursive;
+}
+
+#footer ul {
+  list-style: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
+.fondo {
+  background-color: #1a1a1a;
+  color: #fff;
 }

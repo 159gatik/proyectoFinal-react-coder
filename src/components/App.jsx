@@ -14,22 +14,35 @@ import Checkout from './containers/Checkout.jsx';
 function App() {
   return (
     <>
-      <DarkModeProvider>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<ItemListContainer />} />
-            <Route path="/producto/:id" element={<Item />} />
-            <Route path="/categoria/:id" element={<Categoria />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/form" element={<Form />} />
-            <Route path="/carrito" element={<Carrito />} />
-            <Route path="*" element={<h1>Error 404</h1>} />
-            <Route path="/checkout" element={<Checkout />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </DarkModeProvider>
+
+
+
+      <div id="page-container">
+        <div id="content-wrap">
+          <DarkModeProvider>
+            <BrowserRouter>
+              <Navbar />
+              <Routes>
+                <Route path="/" element={<ItemListContainer />} />
+                <Route path="/producto/:id" element={<Item />} />
+                <Route path="/categoria/:id" element={<Categoria />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/form" element={<Form />} />
+                <Route path="/carrito" element={<Carrito />} />
+                <Route path="*" element={<h1>Error 404</h1>} />
+                <Route path="/checkout" element={<Checkout />} />
+              </Routes>
+            </BrowserRouter>
+          </DarkModeProvider>
+
+        </div>
+
+        <Footer />
+      </div>
+
+
+
+
     </>
   );
 }

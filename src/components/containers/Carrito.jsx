@@ -22,7 +22,7 @@ const Carrito = () => {
     return (
         <>
             {carrito.length ?
-                <div className={darkMode ? 'darkMode row' : 'row '} >
+                <div className={darkMode ? 'darkMode container-fluid' : ' '} >
 
                     <table className="table table-hover">
                         <thead>
@@ -43,7 +43,7 @@ const Carrito = () => {
                                     <td scope="row" className='text-center'>{item.producto.nombre} {item.producto.marca} </td>
                                     <td>{formatearMonto(item.producto.precio)} </td>
                                     <td>{item.cantidad} </td>
-                                    <td> {formatearMonto(item.producto.precio * item.cantidad)}  </td>
+                                    <td> {formatearMonto(item.producto.precio * item.cantidad)} </td>
                                     <td scope="col"><Button variant='contained' color='error' startIcon={<DeleteIcon />} className='btnProducto' onClick={() => quitarProducto(item.producto)}>Borrar</Button></td>
                                 </tr>
                             </>
