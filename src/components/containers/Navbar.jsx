@@ -12,7 +12,7 @@ import "../styles/App.css"
 // import Register from '../navbar/layouts/Register'
 
 const Navbar = () => {
-    const { darkMode, toggleDarkMode } = useContext(darkModeContext);
+    const { toggleDarkMode } = useContext(darkModeContext);
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">

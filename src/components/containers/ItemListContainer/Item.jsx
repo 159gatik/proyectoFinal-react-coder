@@ -1,15 +1,13 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProducto } from '../../../utils/firebase';
-import { darkModeContext } from '../../context/darkMode';
 import ItemList from './ItemList';
 
 const Item = () => {
     const [producto, setProducto] = useState([]);
     const { id } = useParams()
-    const { darkMode } = useContext(darkModeContext)
 
 
     useEffect(() => {

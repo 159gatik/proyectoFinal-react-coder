@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { getProductos } from '../../../utils/firebase';
 import { darkModeContext } from '../../context/darkMode';
-import { Link } from 'react-router-dom';
 import "../../styles/cards.css"
 import CardProducto from '../CardProducto';
 

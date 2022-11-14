@@ -31,7 +31,7 @@ const CarritoProvider = (props) => {
 
     const quitarProducto = (prod) => {
         const aux = carrito
-        let indice = aux.findIndex(producto => producto.id == prod.id)
+        let indice = aux.findIndex(producto => producto.id === prod.id)
         aux.splice(indice, 1)
         let carritoNuevo = structuredClone(aux)
         setCarrito(carritoNuevo)

@@ -1,6 +1,6 @@
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CarritoContext } from '../context/CarritoContext';
 import { darkModeContext } from '../context/darkMode';
@@ -40,11 +40,11 @@ const Carrito = () => {
                                     <td className='text-center'>
                                         <div><img src={item.producto.img} className="styleCardCarrito " alt={item.producto.nombre} /> </div>
                                     </td>
-                                    <td scope="row" className='text-center'>{item.producto.nombre} {item.producto.marca} </td>
+                                    <td className='text-center'>{item.producto.nombre} {item.producto.marca} </td>
                                     <td>{formatearMonto(item.producto.precio)} </td>
                                     <td>{item.cantidad} </td>
                                     <td> {formatearMonto(item.producto.precio * item.cantidad)} </td>
-                                    <td scope="col"><Button variant='contained' color='error' startIcon={<DeleteIcon />} className='btnProducto' onClick={() => quitarProducto(item.producto)}>Borrar</Button></td>
+                                    <td ><Button variant='contained' color='error' startIcon={<DeleteIcon />} className='btnProducto' onClick={() => quitarProducto(item.producto)}>Borrar</Button></td>
                                 </tr>
                             </>
                             )}

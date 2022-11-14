@@ -4,17 +4,15 @@ import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import { CarritoContext } from '../../context/CarritoContext';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { darkModeContext } from '../../context/darkMode';
 
 const ItemList = ({ producto }) => {
 
     const [cantidad, setCantidad] = useState(1);
 
-    const { carrito, agregarProducto, quitarProducto, formatearMonto } = useContext(CarritoContext)
-    const { darkMode } = useContext(darkModeContext);
+    const { agregarProducto, formatearMonto } = useContext(CarritoContext)
 
     const cantidadProducto = (operacion) => {
-        if (operacion == "+") {
+        if (operacion === "+") {
             if (cantidad < producto.stock) {
                 setCantidad(cantidad + 1)
             }
