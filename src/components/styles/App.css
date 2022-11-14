@@ -59,40 +59,13 @@ body {
   text-align: center;
 }
 
-/* .footer {
-  height: 200px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #1a1a1a;
-  color: white;
-  text-align: center;
-
-
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #1a1a1a;
-  color: #fff;
-} */
-
-/* .footer h4 {
-  color: #fff;
-  font-family: 'Peralta', cursive;
-}
-
-.footer ul {
-  list-style: none;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-} */
-
 
 
 
 #page-container {
   position: relative;
-  min-height: 86.4vh;
+  min-height: 100vh;
+  padding-bottom: 200px;
 }
 
 #content-wrap {
@@ -102,11 +75,10 @@ body {
 
 #footer {
   position: absolute;
+  background-color: #1a1a1a;
+  padding: 10px 10px 0px 10px;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;
-  background-color: #1a1a1a;
-  /* Footer height */
 }
 
 
