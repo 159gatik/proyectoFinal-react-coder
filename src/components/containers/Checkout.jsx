@@ -4,8 +4,7 @@ import { CarritoContext } from "../context/CarritoContext";
 import { createOrdenDeCompra } from "../../utils/firebase";
 // import { FormControl, InputLabel, Input, FormHelperText } from '@mui/material';
 const Checkout = () => {
-  const { compraRealizada, carrito, getCantidadTotal } =
-    useContext(CarritoContext);
+  const { compraRealizada, getCantidadTotal } = useContext(CarritoContext);
 
   const formularioReferenciado = React.useRef();
 
