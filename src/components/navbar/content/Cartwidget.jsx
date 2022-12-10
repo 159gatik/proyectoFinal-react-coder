@@ -10,7 +10,7 @@ const Cartwidget = () => {
         <>
             <div className='iconCart' >
                 <button type="button" className="btn btn-dark"><FontAwesomeIcon icon={faCartShopping} /></button>
-                <span class='badge badge-warning' id='lblCartCount'> {carrito.length} </span>
+                <span className='badge badge-warning' id='lblCartCount'> {carrito.length} </span>
             </div>
 
 

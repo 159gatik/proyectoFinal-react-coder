@@ -1,34 +1,39 @@
-import { useState, useEffect, useContext } from 'react';
-import { useParams } from 'react-router-dom';
-// import { consultarProductos } from '../../utils/funcionesUtiles';
-import { getProductos } from '../../utils/firebase';
-import { darkModeContext } from '../context/darkMode';
-import CardProducto from './CardProducto';
+import { useState, useEffect, useContext } from "react";
+import { useParams } from "react-router-dom";
+import { getProductos } from "../../utils/firebase";
+import { darkModeContext } from "../context/darkMode";
+import CardProducto from "./CardProducto";
+import Spinner from "./Spinner";
 const Categoria = () => {
+  const [productosPorCategoria, setProductosPorCategoria] = useState([]);
+  const [showSpinner, setShowSpinner] = useState(false);
+  const { darkMode } = useContext(darkModeContext);
+  const { id } = useParams();
 
-    const [productosPorCategoria, setProductosPorCategoria] = useState([]);
+  useEffect(() => {
+    setShowSpinner(true);
+    getProductos()
+      .then((productos) => {
+        const productosFiltrados = productos.filter(
+          (producto) => producto.categoria === id
+        );
+        setProductosPorCategoria(productosFiltrados);
+      })
+      .finally(() => setShowSpinner(false));
+  }, [id]);
 
-    const { darkMode } = useContext(darkModeContext);
-    const { id } = useParams()
-
-    useEffect(() => {
-        getProductos().then(productos => {
-            const productosFiltrados = productos.filter(producto => producto.categoria === id)
-            setProductosPorCategoria(productosFiltrados)
-        })
-    }, [id]);
-
-
-    return (
-        <div className={darkMode ? 'darkMode row' : 'row'}>
-            <div className='row mw-100 d-flex justify-content-center'>
-
-                {productosPorCategoria.map(producto => <CardProducto producto={producto} />)}
-
-            </div>
+  return (
+    <>
+      <Spinner show={showSpinner} />
+      <div className={darkMode ? "darkMode row" : "row"}>
+        <div className="row mw-100 d-flex justify-content-center">
+          {productosPorCategoria.map((producto) => (
+            <CardProducto producto={producto} />
+          ))}
         </div>
-    )
-
-}
+      </div>
+    </>
+  );
+};
 
 export default Categoria;
