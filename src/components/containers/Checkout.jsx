@@ -1,16 +1,27 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
+import { createOrdenDeCompra } from "../../utils/firebase";
 // import { FormControl, InputLabel, Input, FormHelperText } from '@mui/material';
 const Checkout = () => {
-  const { compraRealizada } = useContext(CarritoContext);
+  const { compraRealizada, carrito, getCantidadTotal } =
+    useContext(CarritoContext);
 
   const formularioReferenciado = React.useRef();
 
   const consultarFormulario = (e) => {
     e.preventDefault();
     const datosFormulario = new FormData(formularioReferenciado.current);
-    console.log(Object.fromEntries(datosFormulario));
+    const datosForm = Object.fromEntries(datosFormulario);
+
+    const nuevaOrden = {
+      ...datosForm,
+      precio: getCantidadTotal(),
+    };
+
+    createOrdenDeCompra(nuevaOrden).then((response) => {
+      compraRealizada(response.id);
+    });
   };
 
   return (
@@ -21,19 +32,40 @@ const Checkout = () => {
             <label htmlFor="nombre" className="form-label">
               Nombre
             </label>
-            <input type="text" className="form-control" name="nombre" />
+            <input
+              type="text"
+              className="form-control"
+              name="nombre"
+              required
+            />
           </div>
           <div className="mb-3">
             <label htmlFor="apellido" className="form-label">
               Apellido
             </label>
-            <input type="text" className="form-control" name="nombre" />
+            <input
+              type="text"
+              className="form-control"
+              name="apellido"
+              required
+            />
           </div>
           <div className="mb-3">
             <label htmlFor="email" className="form-label">
               Email
             </label>
-            <input type="email" className="form-control" name="email" />
+            <input
+              type="email"
+              className="form-control"
+              name="email"
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="dni" className="form-label">
+              Dni
+            </label>
+            <input type="number" className="form-control" name="dni" required />
           </div>
           <div className="mb-3">
             <label htmlFor="direccion" className="form-label">
@@ -42,26 +74,23 @@ const Checkout = () => {
             <input
               type="text"
               className="form-control"
-              name="nombre"
+              name="direccion"
               placeholder="Ingresa tu domicilio"
+              required
             />
           </div>
 
-          <button type="submit" className="btn btn-primary">
-            Atras
-          </button>
-
-          <Link to="/">
-            {" "}
-            <button
-              type="submit"
-              onClick={() => compraRealizada()}
-              className="btn btn-success"
-              to="/"
-            >
-              finalizar compra
-            </button>{" "}
+          <Link to="/carrito">
+            <button type="submit" className="btn btn-primary">
+              Atras
+            </button>
           </Link>
+
+          {/* <Link to="/"> */}
+          <button type="submit" className="btn btn-success">
+            Finalizar
+          </button>
+          {/* </Link> */}
         </form>
       </div>
     </>

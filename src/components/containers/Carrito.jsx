@@ -8,17 +8,15 @@ import CheckIcon from "@mui/icons-material/Check";
 import "../styles/cards.css";
 
 const Carrito = () => {
-  const { carrito, quitarProducto, vaciarCarrito, formatearMonto } =
-    useContext(CarritoContext);
+  const {
+    carrito,
+    quitarProducto,
+    vaciarCarrito,
+    formatearMonto,
+    getCantidadTotal,
+  } = useContext(CarritoContext);
   const { darkMode } = useContext(darkModeContext);
 
-  const getCantidadTotal = () => {
-    let resultado = 0;
-    carrito.forEach((item) => {
-      resultado += item.producto.precio * item.cantidad;
-    });
-    return resultado;
-  };
   return (
     <>
       {carrito.length ? (
@@ -45,78 +43,70 @@ const Carrito = () => {
             </thead>
             <tbody>
               {carrito.map((item) => (
-                <>
-                  <tr className="text-center" key={item.producto.id}>
-                    <td className="text-center">
-                      <div>
-                        <img
-                          src={item.producto.img}
-                          className="styleCardCarrito "
-                          alt={item.producto.nombre}
-                        />{" "}
-                      </div>
-                    </td>
-                    <td className="text-center">
-                      {item.producto.nombre} {item.producto.marca}{" "}
-                    </td>
-                    <td>{formatearMonto(item.producto.precio)} </td>
-                    <td>{item.cantidad} </td>
-                    <td>
-                      {" "}
-                      {formatearMonto(
-                        item.producto.precio * item.cantidad
-                      )}{" "}
-                    </td>
-                    <td>
-                      <Button
-                        variant="contained"
-                        color="error"
-                        startIcon={<DeleteIcon />}
-                        className="btnProducto"
-                        onClick={() => quitarProducto(item.producto)}
-                      >
-                        Borrar
-                      </Button>
-                    </td>
-                  </tr>
-                </>
+                <tr key={item.producto.id} className="text-center">
+                  <td className="text-center">
+                    <div>
+                      <img
+                        src={item.producto.img}
+                        className="styleCardCarrito "
+                        alt={item.producto.nombre}
+                      />
+                    </div>
+                  </td>
+                  <td className="text-center">
+                    {item.producto.nombre} {item.producto.marca}
+                  </td>
+                  <td>{formatearMonto(item.producto.precio)} </td>
+                  <td>{item.cantidad} </td>
+                  <td>
+                    {formatearMonto(item.producto.precio * item.cantidad)}
+                  </td>
+                  <td>
+                    <Button
+                      variant="contained"
+                      color="error"
+                      startIcon={<DeleteIcon />}
+                      className="btnProducto"
+                      onClick={() => quitarProducto(item.producto)}
+                    >
+                      Borrar
+                    </Button>
+                  </td>
+                </tr>
               ))}
-              <div className="text-center fw-bold">
-                Total: {formatearMonto(getCantidadTotal())}
-              </div>
             </tbody>
           </table>
+          <div className="text-center fw-bold">
+            Total: {formatearMonto(getCantidadTotal())}
+          </div>
           <Button
             variant="contained"
             className="buttomCarrito"
             onClick={() => vaciarCarrito()}
             startIcon={<DeleteIcon />}
           >
-            {" "}
             Borrar Todo
           </Button>
-          <Button
-            to="/checkout"
-            variant="contained"
-            className="buttomCompra"
-            color="success"
-            startIcon={<CheckIcon />}
-          >
-            <Link to="/checkout" className="buttomCompra">
+
+          <Link to="/checkout" className="buttomCompra">
+            <Button
+              variant="contained"
+              className="buttomCompra"
+              color="success"
+              startIcon={<CheckIcon />}
+            >
               Enviar Pedido
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       ) : (
         <div className="backCart">
-          {" "}
-          <h1>No hay productos en tu carrito😔</h1>{" "}
+          <h1>No hay productos en tu carrito😔</h1>
           <button className="btn btn-primary">
             <Link className="nav-link" to={"/"}>
-              {" "}
-              Volver a inicio{" "}
+              Volver a inicio
             </Link>
-          </button>{" "}
+          </button>
         </div>
       )}
     </>

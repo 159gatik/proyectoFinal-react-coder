@@ -4,6 +4,7 @@ import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import { CarritoContext } from "../../context/CarritoContext";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Link } from "react-router-dom";
 const ItemList = ({ producto }) => {
   const [cantidad, setCantidad] = useState(1);
 
@@ -77,15 +78,8 @@ const ItemList = ({ producto }) => {
                 agregar
               </Button>
               {carrito.length > 0 && (
-                <Button
-                  variant="contained"
-                  color="success"
-                  size="small"
-                  onClick={() => {
-                    agregarProducto(producto, cantidad);
-                  }}
-                >
-                  realizar compra
+                <Button variant="contained" color="success" size="small">
+                  <Link to="/checkout">Enviar Pedido</Link>
                 </Button>
               )}
             </div>

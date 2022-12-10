@@ -10,9 +10,23 @@ const CarritoProvider = (props) => {
   }, []);
 
   const agregarProducto = (producto, cantidad) => {
-    let carritoNuevo = [...carrito, { producto, cantidad }];
+    const itemEncontrado = carrito.find(
+      (item) => item.producto.id === producto.id
+    );
+
+    let carritoNuevo;
+
+    if (itemEncontrado) {
+      // si el produco no esta en el array
+      itemEncontrado.cantidad += cantidad;
+      carritoNuevo = [...carrito];
+    } else {
+      carritoNuevo = [...carrito, { producto, cantidad }];
+    }
+
     setCarrito(carritoNuevo);
     guardarCarrito(carritoNuevo);
+
     Swal.fire({
       icon: "success",
       title: "Agregado al carrito con exito",
@@ -46,16 +60,21 @@ const CarritoProvider = (props) => {
     });
   };
 
-  const compraRealizada = () => {
+  const compraRealizada = (idCompra) => {
     let carritoNuevo = [];
     setCarrito(carritoNuevo);
     guardarCarrito(carritoNuevo);
+
     Swal.fire({
       icon: "success",
       title: "COMPRA REALIZADA",
-      text: "QUE LA DISFRUTES!",
-      showConfirmButton: false,
-      timer: 2500,
+      text: "QUE LA DISFRUTES!. Tu número de compra es: " + idCompra,
+      showConfirmButton: true,
+      timer: 20000,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "/";
+      }
     });
   };
 
@@ -69,6 +88,14 @@ const CarritoProvider = (props) => {
     );
   };
 
+  const getCantidadTotal = () => {
+    let resultado = 0;
+    carrito.forEach((item) => {
+      resultado += item.producto.precio * item.cantidad;
+    });
+    return resultado;
+  };
+
   return (
     <>
       <CarritoContext.Provider
@@ -79,6 +106,7 @@ const CarritoProvider = (props) => {
           vaciarCarrito,
           compraRealizada,
           formatearMonto,
+          getCantidadTotal,
         }}
       >
         {props.children}

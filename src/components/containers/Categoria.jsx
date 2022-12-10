@@ -28,7 +28,7 @@ const Categoria = () => {
       <div className={darkMode ? "darkMode row" : "row"}>
         <div className="row mw-100 d-flex justify-content-center">
           {productosPorCategoria.map((producto) => (
-            <CardProducto producto={producto} />
+            <CardProducto producto={producto} key={producto.id} />
           ))}
         </div>
       </div>
