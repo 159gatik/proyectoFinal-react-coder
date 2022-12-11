@@ -17,6 +17,7 @@ const Cartwidget = () => {
 
   useEffect(() => {
     setCantidadProductos(getCantidad());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [carrito]);
 
   return (
